@@ -36,6 +36,32 @@ int main()
   return 0;
 }
 
+//USING EXCEPTION HANDLING
+
+#include<iostream>
+using namespace std;
+int main()
+{ 
+int num1,num2,num3,num4,num5;
+float average;
+cout<<"\n Enter five numbers: ";
+cin>>num1>>num2>>num3>>num4>>num5;
+try
+{
+  if(num1<0||num2<0||num3<0||num4<0||num5<0) 
+    {
+      throw invalid_argument("\n Negative numbers are not allowed");
+    }
+    average=(num1+num2+num3+num4+num5)/5;
+    cout<<"\n The average of the numbers is: "<< average<<endl;
+}
+catch (const invalid_argument& e)
+{
+        cerr<<"\n Invalid input: "<<e.what()<<endl;
+}
+return 0;
+}
+
 //USING VIRTUAL FUNCTION
 
 #include<iostream>
