@@ -1,4 +1,4 @@
-//USING INHERITANCE & INHERITANCE
+//USING INHERITANCE & VIRTUAL FUNCTION
 
 #include <iostream>
 #include <string>
